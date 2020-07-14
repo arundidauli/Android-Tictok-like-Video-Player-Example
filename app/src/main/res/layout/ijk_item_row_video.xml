@@ -5,10 +5,10 @@
     android:layout_height="match_parent">
 
 
-    <com.dl7.player.media.IjkPlayerView
+  <!--  <com.dl7.player.media.IjkPlayerView
         android:id="@+id/player_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"/>-->
 
 
 

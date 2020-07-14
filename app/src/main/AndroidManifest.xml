@@ -11,6 +11,7 @@
 
     <application
         android:allowBackup="true"
+        android:name=".AppController"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -21,7 +22,8 @@
         android:usesCleartextTraffic="true"
         android:vmSafeMode="true"
         tools:targetApi="m">
-        <activity android:name=".player_activities.IjkPlayerActivity"></activity>
+        <activity android:name=".player_activities.TiktokPlayerActivity"></activity>
+        <activity android:name=".player_activities.IjkPlayerActivity" />
         <activity android:name=".player_activities.RecyclerAnimationActivity" />
         <activity android:name=".player_activities.Exo2Activity" />
         <activity android:name=".player_activities.JCVideoPlayerStandardActivity" />

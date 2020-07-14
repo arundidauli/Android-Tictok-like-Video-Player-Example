@@ -19,6 +19,7 @@ import com.wingshield.technologies.testingplayer.player_activities.MagicalExoPla
 import com.wingshield.technologies.testingplayer.player_activities.MxPlayerActivity;
 import com.wingshield.technologies.testingplayer.player_activities.RecyclerAnimationActivity;
 import com.wingshield.technologies.testingplayer.player_activities.SimpleExoPlayerActivity;
+import com.wingshield.technologies.testingplayer.player_activities.TiktokPlayerActivity;
 
 public class MainActivity extends AppCompatActivity {
     private static String TAG = MainActivity.class.getSimpleName();
@@ -55,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), MxPlayerActivity.class);
+                Intent intent = new Intent(getApplicationContext(), TiktokPlayerActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);

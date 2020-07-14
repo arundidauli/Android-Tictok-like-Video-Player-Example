@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.dl7.player.media.IjkPlayerView;
+
 import com.wingshield.technologies.testingplayer.R;
 import com.wingshield.technologies.testingplayer.UserClips;
 
@@ -41,13 +41,13 @@ public class IjkPlayerAdapter extends RecyclerView.Adapter<IjkPlayerAdapter.MyVi
     public void onBindViewHolder(@NonNull final MyViewHolder holder, int position) {
 
         // holder.videoPlayerWidget.autoStartPlay("http://ia800208.us.archive.org/4/items/Popeye_forPresident/Popeye_forPresident_512kb.mp4", MxVideoPlayer.SCREEN_WINDOW_FULLSCREEN, "");
-        Glide.with(context).load("https://i.ibb.co/h2pBsP5/aadhar.png").fitCenter().into(holder.ijkPlayerView.mPlayerThumb);
+      /*  Glide.with(context).load("https://i.ibb.co/h2pBsP5/aadhar.png").fitCenter().into(holder.ijkPlayerView.mPlayerThumb);
         holder.ijkPlayerView.init()
                 .setTitle("Title")
                 .alwaysFullScreen()	// keep fullscreen
                 .setVideoPath("http://ia800208.us.archive.org/4/items/Popeye_forPresident/Popeye_forPresident_512kb.mp4")
                 .start();
-
+*/
     }
 
     @Override
@@ -56,12 +56,12 @@ public class IjkPlayerAdapter extends RecyclerView.Adapter<IjkPlayerAdapter.MyVi
     }
 
     static class MyViewHolder extends RecyclerView.ViewHolder {
-        private IjkPlayerView ijkPlayerView;
+       // private IjkPlayerView ijkPlayerView;
 
         MyViewHolder(View view) {
             super(view);
 
-            ijkPlayerView = view.findViewById(R.id.player_view);
+            //ijkPlayerView = view.findViewById(R.id.player_view);
 
 
 

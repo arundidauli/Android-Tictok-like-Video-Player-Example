@@ -1,19 +1,18 @@
-package com.wingshield.technologies.testingplayer;
+package com.wingshield.technologies.testingplayer.utils;
 
-public class UserClips {
+public class UserClip {
     public String name;
     public String city;
     public String hobbies;
-    public int url;
+    private String thumb_url, Video_url;
 
-    public UserClips(String name, String city, String hobbies, int url) {
+    public UserClip(String name, String city, String hobbies, String thumb_url, String video_url) {
         this.name = name;
         this.city = city;
         this.hobbies = hobbies;
-        this.url = url;
+        this.thumb_url = thumb_url;
+        Video_url = video_url;
     }
-
-
 
     public String getName() {
         return name;
@@ -39,11 +38,19 @@ public class UserClips {
         this.hobbies = hobbies;
     }
 
-    public int getUrl() {
-        return url;
+    public String getThumb_url() {
+        return thumb_url;
     }
 
-    public void setUrl(int url) {
-        this.url = url;
+    public void setThumb_url(String thumb_url) {
+        this.thumb_url = thumb_url;
+    }
+
+    public String getVideo_url() {
+        return Video_url;
+    }
+
+    public void setVideo_url(String video_url) {
+        Video_url = video_url;
     }
 }

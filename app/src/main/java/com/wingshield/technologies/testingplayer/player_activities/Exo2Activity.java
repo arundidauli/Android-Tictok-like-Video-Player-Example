@@ -1,10 +1,9 @@
 package com.wingshield.technologies.testingplayer.player_activities;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
-
-import android.content.res.Resources;
-import android.os.Bundle;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.RequestManager;
@@ -23,26 +22,28 @@ public class Exo2Activity extends AppCompatActivity {
     private static final String TAG = "Exo2Activity";
 
     private VideoPlayerRecyclerView mRecyclerView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exo2);
+        mRecyclerView = findViewById(R.id.recycler_view);
+
         initRecyclerView();
     }
 
-    private void initRecyclerView(){
+    private void initRecyclerView() {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(layoutManager);
         VerticalSpacingItemDecorator itemDecorator = new VerticalSpacingItemDecorator(10);
         mRecyclerView.addItemDecoration(itemDecorator);
-
         ArrayList<MediaObject> mediaObjects = new ArrayList<MediaObject>(Arrays.asList(MResources.MEDIA_OBJECTS));
         mRecyclerView.setMediaObjects(mediaObjects);
         VideoPlayerRecyclerAdapter adapter = new VideoPlayerRecyclerAdapter(mediaObjects, initGlide());
         mRecyclerView.setAdapter(adapter);
     }
 
-    private RequestManager initGlide(){
+    private RequestManager initGlide() {
         RequestOptions options = new RequestOptions()
                 .placeholder(R.drawable.ic_add_box)
                 .error(R.drawable.ic_add_box);
@@ -54,7 +55,7 @@ public class Exo2Activity extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
-        if(mRecyclerView!=null)
+        if (mRecyclerView != null)
             mRecyclerView.releasePlayer();
         super.onDestroy();
     }

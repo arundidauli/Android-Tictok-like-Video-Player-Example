@@ -36,7 +36,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="16dp"
-        android:text="Example"/>
+        android:text="Tick Tok"/>
     <Button
         android:id="@+id/btn2"
         android:layout_width="match_parent"
